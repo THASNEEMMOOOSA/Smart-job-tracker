@@ -1,122 +1,74 @@
-# <img src="https://raw.githubusercontent.com/THASNEEMMOOOSA/Vertus-job-tracker/main/frontend/src/assets/vertusf.png" alt="Vertus Logo" width="50" style="vertical-align:middle;"> Vertus -  Job Tracker & Analytics Platform
+# <img src="https://raw.githubusercontent.com/THASNEEMMOOOSA/Vertus-job-tracker/main/frontend/src/assets/vertusf.png" alt="Vertus Logo" width="50" style="vertical-align:middle;"> Vertus - Job Tracker & Analytics Platform
 
-A full-stack SaaS-style application designed to help users **track job applications, manage interview pipelines, and gain actionable insights through analytics dashboards**.
-
-Built with a modern **React + FastAPI + PostgreSQL + AWS deployment architecture**, this platform demonstrates end-to-end product development, scalable backend APIs, responsive frontend engineering, and cloud deployment best practices.
-
----
-
-## 📌 Overview
-
-Vertus is a production-style job application management platform that enables users to:
-
-* Track job applications across different stages
-* Manage interview pipelines
-* Monitor application trends and status distribution
-* View analytics dashboards
-* Perform full CRUD operations
-* Securely authenticate using JWT
-* Access the application via cloud deployment on AWS EC2
-
-This project was built to showcase **full-stack engineering capabilities**, **clean architecture principles**, and **real-world deployment workflows**.
+[![GitHub Repo Size](https://img.shields.io/github/repo-size/THASNEEMMOOOSA/Vertus-job-tracker?style=for-the-badge)](https://github.com/THASNEEMMOOOSA/Vertus-job-tracker)
+[![GitHub Issues](https://img.shields.io/github/issues/THASNEEMMOOOSA/Vertus-job-tracker?style=for-the-badge)](https://github.com/THASNEEMMOOOSA/Vertus-job-tracker/issues)
+[![GitHub License](https://img.shields.io/github/license/THASNEEMMOOOSA/Vertus-job-tracker?style=for-the-badge)](https://github.com/THASNEEMMOOOSA/Vertus-job-tracker/blob/main/LICENSE)
+[![React](https://img.shields.io/badge/React-blue?style=for-the-badge&logo=react)](https://reactjs.org/)
+[![Python](https://img.shields.io/badge/Python-3.11-blue?style=for-the-badge&logo=python)](https://www.python.org/)
+[![FastAPI](https://img.shields.io/badge/FastAPI-green?style=for-the-badge&logo=fastapi)](https://fastapi.tiangolo.com/)
 
 ---
 
-## 🏗 Tech Stack
+## Overview
 
-### Frontend
+Vertus is a full-stack SaaS platform that allows users to:
 
-* **React.js**
-* **TypeScript**
-* **Tailwind CSS**
-* **Axios**
-* **Recharts**
-* **React Router DOM**
+- Track job applications across different stages  
+- Manage interview pipelines  
+- Monitor application trends and status distribution  
+- Access analytics dashboards  
+- Perform full CRUD operations  
+- Authenticate securely using JWT  
+- Deploy and access via AWS EC2  
 
-### Backend
-
-* **FastAPI**
-* **Python**
-* **SQLAlchemy**
-* **Pydantic**
-* **JWT Authentication**
-* **PostgreSQL**
-
-### Cloud & DevOps
-
-* **AWS EC2 (Free Tier)**
-* **Nginx**
-* **systemd service management**
-* **GitHub**
-* **Linux / Ubuntu**
-* **REST APIs**
+This project demonstrates **full-stack engineering**, **scalable backend APIs**, **responsive frontend architecture**, and **cloud deployment workflows**.
 
 ---
 
-## ✨ Key Features
+## Technology Stack
 
-### 🔐 Authentication & Security
-
-* JWT-based login and registration
-* Protected API routes
-* Secure password hashing
-* Token-based session management
+**Frontend:** React, TypeScript, Tailwind CSS, Axios, Recharts, React Router DOM  
+**Backend:** FastAPI, Python, SQLAlchemy, Pydantic, JWT Authentication, PostgreSQL  
+**Cloud & DevOps:** AWS EC2, Nginx, systemd, Linux/Ubuntu, REST APIs
 
 ---
 
-### 📋 Job Management
+## Key Features
 
-* Add new job applications
-* Edit application details
-* Delete applications
-* Search by company name
-* Filter by status
-* Status pipeline support:
+### Authentication & Security
+- JWT-based login and registration  
+- Protected API routes  
+- Secure password hashing and token-based session management  
 
-  * Applied
-  * Interview
-  * Offer
-  * Rejected
+### Job Management
+- Add, edit, delete job applications  
+- Search and filter by company or status  
+- Status pipeline: Applied → Interview → Offer → Rejected  
 
----
+### Analytics Dashboard
+- Total application count  
+- Status distribution charts  
+- Weekly trends and KPI visualization  
 
-### 📊 Analytics Dashboard
-
-* Total application count
-* Status distribution chart
-* Weekly trend chart
-* KPI cards
-* Dashboard visualizations using Recharts
-
----
-
-### ☁ Cloud Deployment
-
-* Frontend deployed on **AWS EC2 + Nginx**
-* Backend served via **Uvicorn + systemd**
-* PostgreSQL database integration
-* Production-style Linux service deployment
+### Cloud Deployment
+- Frontend served via AWS EC2 + Nginx  
+- Backend deployed with FastAPI + Uvicorn + systemd  
+- PostgreSQL database integration  
+- Production-style Linux service deployment  
 
 ---
 
-## 📸 Application Screenshots
-
-### Dashboard
-
-*Add your screenshot here*
-
-## 📸 Application Screenshots
-
-### Dashboard
+## Application Screenshots
 
 <p align="center">
   <img src="https://raw.githubusercontent.com/THASNEEMMOOOSA/Vertus-job-tracker/main/screenshots/front1.png" alt="Dashboard Screenshot 1" width="300" style="margin-right:10px;" />
   <img src="https://raw.githubusercontent.com/THASNEEMMOOOSA/Vertus-job-tracker/main/screenshots/front2.png" alt="Dashboard Screenshot 2" width="300" style="margin-right:10px;" />
   <img src="https://raw.githubusercontent.com/THASNEEMMOOOSA/Vertus-job-tracker/main/screenshots/front3.png" alt="Dashboard Screenshot 3" width="300" />
 </p>
+
 ---
 
-## 📁 Project Structure
+## Project Structure
 
 ```text
 vertus-job-tracker/
@@ -126,118 +78,60 @@ vertus-job-tracker/
 │   ├── components/
 │   ├── pages/
 │   └── services/
-│
 ├── backend/
 │   ├── app/
 │   │   ├── api/
 │   │   ├── models/
 │   │   ├── schemas/
 │   │   └── core/
-│
 └── README.md
-```
+API Endpoints
 
----
+Authentication
 
-## 🚀 API Endpoints
-
-### Authentication
-
-```http
 POST /auth/register
 POST /auth/login
-```
 
-### Jobs
+Jobs
 
-```http
 GET    /jobs
 POST   /jobs
 PUT    /jobs/{id}
 DELETE /jobs/{id}
-```
 
-### Analytics
+Analytics
 
-```http
 GET /jobs/analytics/summary
-```
-
----
-
-## 🛠 Local Setup
-
-### Clone Repository
-
-```bash
-git clone https://github.com/yourusername/Vertus-job-tracker.git
-cd smart-job-tracker
-```
-
----
-
-## Backend Setup
-
-```bash
+Local Setup
+Clone Repository
+git clone https://github.com/THASNEEMMOOOSA/Vertus-job-tracker.git
+cd Vertus-job-tracker
+Backend
 cd backend
 python -m venv venv
 source venv/bin/activate
 pip install -r requirements.txt
 uvicorn app.main:app --reload
-```
-
----
-
-## Frontend Setup
-
-```bash
+Frontend
 cd frontend
 npm install
 npm run dev
-```
+AWS Deployment
+EC2 Ubuntu Free Tier provisioning
+Nginx reverse proxy configuration
+FastAPI backend deployed as systemd service
+PostgreSQL integration
+Frontend static asset hosting
+Why This Project
+Demonstrates full-stack development and architecture
+Scalable REST API design
+Frontend state management and data visualization
+Production-style cloud deployment
+End-to-end software engineering practices
+Author
 
----
-
-## ☁ AWS Deployment Highlights
-
-This application is deployed using **AWS Free Tier EC2 Ubuntu instance**.
-
-Deployment includes:
-
-* Linux server provisioning
-* Nginx reverse proxy
-* FastAPI service via `systemd`
-* PostgreSQL integration
-* frontend static asset hosting
-
-This project demonstrates hands-on experience in:
-
-* cloud deployment
-* server configuration
-* production application hosting
-* service reliability
-
----
-
-## 🎯 Why This Project
-
-This project was built to demonstrate:
-
-* full-stack application development
-* scalable REST API design
-* frontend architecture and state management
-* data visualization
-* cloud deployment workflows
-* production-style software engineering practices
-
----
-
-## 👨‍💻 Author
-
-**Your Name**
+Your Name
 Full Stack Developer | React | FastAPI | Python | AWS | PostgreSQL
 
-LinkedIn: *add your profile link*
-Portfolio: *add your portfolio link*
-
----
+LinkedIn
+ | Portfolio
