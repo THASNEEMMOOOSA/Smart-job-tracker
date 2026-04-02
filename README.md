@@ -165,7 +165,7 @@ GET /jobs/analytics/summary
 ### Clone Repository
 
 ```bash
-git clone https://github.com/yourusername/smart-job-tracker.git
+git clone https://github.com/yourusername/Vertus-job-tracker.git
 cd smart-job-tracker
 ```
 
